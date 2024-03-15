@@ -1,0 +1,74 @@
+//--INSTALLATION--//
+--CREAR PROYECTO LARAVEL
+	composer global require laravel/installer
+	laravel new nubefa
+--VER VERSION
+	php artisan --version
+
+//--INSTALLATION TENANCY--//
+--PAQUETE DE COMPOSER
+	composer require stancl/tenancy
+--INSTALAR TENANCY
+	php artisan tenancy:install
+--CREAR CARPETA DE MIGRACION TENANTS
+	php artisan tenants:migrate
+
+
+
+//--TENANCY CONFIGURACIONES--//
+Despues de hacer las configuraciones
+
+
+
+--EJECUTAR MIGRACIONES
+	php artisan migrate
+
+//--CONTROLLERS--//
+--CREAR CONTROLADOR
+	php artisan make:controller API/****Controller --api
+--CREAR MODELO
+	php artisan make:model ****
+--CREAR MIGRACION
+	php artisan make:migration create_****s_table
+--CREAR REQUEST
+	php artisan make:request Funcion****Request
+--CREAR SEEDER
+	php artisan make:seeder ****Seeder
+--CREAR TODO
+	php artisan make:model Category --all
+	 app/Http/Controllers/CategoryController.php
+     app/Http/Requests/
+     app/Models/Category.php
+     app/Policies/
+     database/factories/CategoryFactory.php
+     database/migrations/2023_03_03_171202_create_categories_table.php        
+     database/seeders/CategorySeeder.php
+
+--CREAR CONTROLADOR Y MODELO
+	php artisan make:controller TaskController --resource --model=Task
+
+//--MIGRATION--//
+--EJECUTAR MIGRACION
+	php artisan migrate
+--EJECUTAR SEEDER
+	php artisan db:seed
+--EJECUTAR UNA MIGRACION EN ESPECIFICO
+	php artisan migrate --path=database/migrations/Fecha_create_****s_table.php
+--REFRESCAR Y EJECUTAR UNA MIGRACION
+	php artisan migrate:refresh --path=database/migration/Fecha_create_****s_table.php --seed
+
+--LEVANTAR SERVIDOR
+	php artisan serve --host=0.0.0.0 --port=9000
+
+
+
+
+
+
+
+
+
+
+
+
+
